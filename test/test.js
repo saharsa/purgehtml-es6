@@ -13,3 +13,8 @@ const variable2 = '<br>3';
 test('purgeHTML test 3', () => {
     expect(purgeHTML(`<h1>Test ${variable2}</h1>`)).toBe('Test 3');
 });
+
+const variable3 = '<br/>4';
+test('purgeHTML test 4', () => {
+    expect(purgeHTML(`<h1>Test ${variable3}</h1>`)).toBe('Test 4');
+});

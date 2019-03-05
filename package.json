@@ -1,16 +1,18 @@
 {
   "name": "purgehtml-es6",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "An npm library for purge html-like markup from an es6 template literal tag",
   "main": "./dist/index.js",
   "scripts": {
     "build": "babel ./src -d dist --ignore */test*",
     "test": "jest test",
-    "release": "npm test && npm run-script build"
+    "release": "npm test && npm run-script build && npm publish"
   },
-  "author": "saharsa.mohanty",
+  "author": "Saharsa Mohanty",
+  "email": "saharsamohanty@gmail.com",
   "repository": "github:saharsa/purgehtml-es6",
   "license": "MIT",
+  "keywords": ["purgehtml","es6"],
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",

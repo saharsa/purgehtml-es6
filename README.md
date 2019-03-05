@@ -26,6 +26,16 @@ This will give the output as follows:
 
 I'm a teapot
 
+## Library explained
+
+The purgeHTML function in src/index.js is exported which does the heavy lifting of removing html markup from any string passed to it.
+
+The test/test.js contains unit tests created using Jest.
+
+The following commands are pre-defined for the app:
+* npm run test : Will run all the test cases defined
+* npm run build : Will create the dist folder with the final index.js file
+* npm run release : Will first run the test cases, if all pass, then will build the library, if this passes as well, will finally publish the library
 
 ## Authors
 
