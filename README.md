@@ -17,18 +17,24 @@ npm install purgehtml-es6
 ## Example
 
 import {purgeHTML} from 'purgehtml-es6';
-
 const item = "teapot";
 const str = purgeHTML(`<h1>I'm a <strong>${item}</strong></h1>`);
 console.log(str);
+
 
 This will give the output as follows:
 
 I'm a teapot
 
+
 ## Authors
 
 **Saharsa Mohanty**
+
+## Built With
+
+* [Babel](https://babeljs.io/) - Transpiler
+* [Jest](https://jestjs.io/) - Testing the library
 
 ## License
 
