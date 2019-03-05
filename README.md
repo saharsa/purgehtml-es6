@@ -20,7 +20,7 @@ import {purgeHTML} from 'purgehtml-es6';
 
 const item = "teapot";
 
-const str = purgeHTML (backtick-operator) a <strong>${item}</strong></h1>`(backtick-operator);
+const str = purgeHTML (backtick-operator)`<h1>I'm a <strong>${item}</strong></h1>`(backtick-operator);
 
 console.log(str);
 
