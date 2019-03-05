@@ -1,0 +1,5 @@
+src/
+test/
+.npmignore
+.gitignore
+babel.config.js
