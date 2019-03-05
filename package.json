@@ -2,7 +2,7 @@
   "name": "purgehtml-es6",
   "version": "1.0.0",
   "description": "An npm library for purge html-like markup from an es6 template literal tag",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel ./src -d dist --ignore */test*",
     "test": "jest test",
