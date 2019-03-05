@@ -1,6 +1,6 @@
 # purgehtml-es6
 
-This npm library helps to remove html markup from template strings.
+This npm library helps to remove html markup from tagged templates.
 
 ## Getting Started
 
@@ -17,9 +17,13 @@ npm install purgehtml-es6
 ## Example
 
 import {purgeHTML} from 'purgehtml-es6';
+
 const item = "teapot";
-const str = purgeHTML(`<h1>I'm a <strong>${item}</strong></h1>`);
+
+const str = purgeHTML `<h1>I'm a <strong>${item}</strong></h1>`;
+
 console.log(str);
+
 
 
 This will give the output as follows:
@@ -28,7 +32,7 @@ I'm a teapot
 
 ## Library explained
 
-The purgeHTML function in src/index.js is exported which does the heavy lifting of removing html markup from any string passed to it.
+The purgeHTML function in src/index.js is exported which does the heavy lifting of removing html markup from any template string passed to it.
 
 The test/test.js contains unit tests created using Jest.
 
