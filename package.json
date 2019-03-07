@@ -1,6 +1,6 @@
 {
   "name": "purgehtml-es6",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "An npm library for purging html-like markup from an es6 template literal",
   "main": "./dist/index.js",
   "scripts": {
