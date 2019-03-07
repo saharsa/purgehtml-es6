@@ -1,6 +1,6 @@
 # purgehtml-es6
 
-This npm library helps to remove html markup from tagged templates.
+This npm library helps to remove html markup from template literals. Can be used in React and Angular as well.
 
 ## Getting Started
 
@@ -29,6 +29,15 @@ console.log(str);
 This will give the output as follows:
 
 I'm a teapot
+
+
+
+If you are not passing a template literal to the function, for example:
+
+purgeHTML('<h1>I'm a </h1>','<h2>strong</h2>','<h3>teapot</h3>');
+
+This will give the output as follows:
+I'm a strongteapot
 
 ## Library explained
 

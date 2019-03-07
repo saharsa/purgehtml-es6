@@ -7,8 +7,6 @@ exports.purgeHTML = void 0;
 
 require("core-js/modules/es6.regexp.replace");
 
-require("core-js/modules/web.dom.iterable");
-
 const regex = /<\/?[^>]+(>|$)/gmi;
 
 const purgeHTML = function purgeHTML(templateString) {
@@ -16,21 +14,19 @@ const purgeHTML = function purgeHTML(templateString) {
     expressions[_key - 1] = arguments[_key];
   }
 
-  let finalPurgedString = '';
-
   if (Array.isArray(templateString)) {
-    templateString.forEach((element, index) => {
-      finalPurgedString = finalPurgedString.concat(element.replace(regex, ""));
-
-      if (expressions[index] != undefined) {
-        finalPurgedString = finalPurgedString.concat(expressions[index].replace(regex, ""));
-      }
+    templateString = templateString.reduce((prev, next, i) => {
+      return `${prev}${expressions[i - 1] || ''}${next}`;
     });
   } else {
-    finalPurgedString = templateString.replace(regex, "");
+    templateString = templateString.concat(expressions.join(''));
   }
 
-  return finalPurgedString;
+  return replaceByRegex(templateString);
 };
 
 exports.purgeHTML = purgeHTML;
+
+const replaceByRegex = stringToConvert => {
+  return stringToConvert.replace(regex, "");
+};

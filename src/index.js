@@ -1,19 +1,18 @@
 const regex = /<\/?[^>]+(>|$)/gmi;
 
 const purgeHTML = (templateString,...expressions) => {
-    let finalPurgedString = '';
     if(Array.isArray(templateString)){
-        templateString.forEach((element,index) => {
-            finalPurgedString = finalPurgedString.concat(element.replace(regex, ""));
-            if(expressions[index]!=undefined){
-                finalPurgedString = finalPurgedString.concat(expressions[index].replace(regex, ""));
-            }
+        templateString = templateString.reduce((prev,next,i)=>{
+            return `${prev}${(expressions[i-1]||'')}${next}`
         });
     }else{
-        finalPurgedString = templateString.replace(regex, "");
+        templateString = templateString.concat(expressions.join(''));  
     }
-    
-    return finalPurgedString;
+    return replaceByRegex(templateString);
   };
+
+  const replaceByRegex = (stringToConvert) => {
+      return stringToConvert.replace(regex,"");
+  }
 
 export {purgeHTML};
