@@ -20,7 +20,7 @@ import {purgeHTML} from 'purgehtml-es6';
 
 const item = "teapot";
 
-const str = purgeHTML (backtick-operator)`<h1>I'm a <strong>${item}</strong></h1>`(backtick-operator);
+const str = purgeHTML &#96;`<h1>I'm a <strong>${item}</strong></h1>`&#96;;
 
 console.log(str);
 
@@ -32,12 +32,13 @@ I'm a teapot
 
 
 
-* If you are not passing a template literal to the function, for example:
-<div>
-purgeHTML('<h1>I'm a </h1>','<h2>strong</h2>','<h3>teapot</h3>');
-</div>
+### Note 
+If you are not passing a template literal to the function, for example:
+
+`purgeHTML('<h1>I'm a </h1>','<h2>strong</h2>','<h3>teapot</h3>');`
 
 This will give the output as follows:
+
 I'm a strongteapot
 
 ## Library explained
